@@ -1,6 +1,6 @@
 # TypeScript Learnings
 
-## A collection of stuff I’ve learned about TypeScript along the way which I don’t want to forget.
+## A collection of things I’ve learned about TypeScript along the way that I don’t want to forget.
 
 ### 1. You should always configure TS with the `noImplicitAny` and `strictNullChecks` options.
 #### And if you can, aim to enable the "strict" option.
