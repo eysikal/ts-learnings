@@ -29,7 +29,33 @@ tsc --strictNullChecks --noEmit
 tsc --strict --noEmit
 ```
 
- 
+
+### 2. A cool trick for preserving type information at runtime is to set a `kind` property:
+```
+interface Truck {
+  kind: 'Truck';
+  mpg: number;
+  tireRotationInterval: number;
+}
+
+interface Plane {
+  kind: 'Plane';
+  flightHours: number;
+  crewSize: number;
+}
+
+type Transporation = Truck | Plane;
+
+// At runtime
+describeTransportation(transport: Transportation) {
+  switch (transport.kind) {
+    case 'Truck':
+      console.log(`${transport.kind}` gets ${mpg} MPG needs its tires rotated every ${tireRotationInterval} miles.`);
+    case 'Plane':
+      console.log(`${transport.kind}` has logged ${flightHours} flight hours and requires a crew size of ${crewSize} people.`);
+  }
+}
+```
  
 
 
