@@ -30,7 +30,7 @@ tsc --strict --noEmit
 ```
 
 
-### 2. A cool trick for preserving type information at runtime is to set a `kind` property:
+### 2. A cool trick for preserving type information at runtime is to "tag" objects with a `kind` property:
 ```
 interface Truck {
   kind: 'Truck';
